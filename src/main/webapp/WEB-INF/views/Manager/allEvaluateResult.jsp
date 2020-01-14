@@ -48,7 +48,7 @@
     });
 
         $.ajax({
-            url:'/OD/user/ajaxgetAllUserName',
+            url:'/user/ajaxgetAllUserName',
             type:'post',
             data:null,
             success:function (msg) {
@@ -131,7 +131,7 @@
                 <td>${statistic.static_xhp }</td>
                 <td>${statistic.static_t }</td>
                 <td>${statistic.static_xdw }</td>
-                <td><a class="btn" href="/OD/evaluate/getValuatedMe/${statistic.stati_user.userId}">查看</a></td>
+                <td><a class="btn" href="/evaluate/getValuatedMe/${statistic.stati_user.userId}">查看</a></td>
             </tr>
         </c:forEach>
     </table>

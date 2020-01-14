@@ -103,23 +103,23 @@
 						href="${pageContext.request.contextPath }/evaluate/seeAllEvaluateResult"><dt>干部总评结果</dt></a>
 					<a target="right" onClick="if(confirm( '确定要清空吗！ ')==false)return   false;"
 						href="${pageContext.request.contextPath }/user/empetDate"><dt>清空数据</dt></a>
-					<%--<a href="/OD/user/modifyexcellent/?juge=1" target="right">修改优秀比例权重</a>
-					<a href="/OD/user/modifyProperties/?juge=1" target="right"><dt>修改校厅级权重</dt</a><br>
-					<a href="/OD/user/modifySGProperties/?juge=1" target="right"><dt>党群正处、行政正处权重</dt></a>
-					<a href="/OD/user/modifySBGProperties/?juge=1" target="right"><dt>教学副书记、教学副院长权重</dt</a>
-					<a href="/OD/user/modifyAGProperties/?juge=1" target="right"><dt>教学正书记、教学正院长权重</dt></a>
-					<a href="/OD/user/modifyDCProperties/?juge=1" target="right"><dt>党群副处、行政副处权重</dt></a>--%>
+					<%--<a href="/user/modifyexcellent/?juge=1" target="right">修改优秀比例权重</a>
+					<a href="/user/modifyProperties/?juge=1" target="right"><dt>修改校厅级权重</dt</a><br>
+					<a href="/user/modifySGProperties/?juge=1" target="right"><dt>党群正处、行政正处权重</dt></a>
+					<a href="/user/modifySBGProperties/?juge=1" target="right"><dt>教学副书记、教学副院长权重</dt</a>
+					<a href="/user/modifyAGProperties/?juge=1" target="right"><dt>教学正书记、教学正院长权重</dt></a>
+					<a href="/user/modifyDCProperties/?juge=1" target="right"><dt>党群副处、行政副处权重</dt></a>--%>
 
 				</dl>
 						
 					<!-- <dl class="channel">
 		              	<dt>修改参数信息</dt>
-						<dd><a href="/OD/user/modifyexcellent/?juge=1" target="right">修改优秀比例权重</a></dd>
-		                <dd><a href="/OD/user/modifyProperties/?juge=1" target="right">校厅级权重</a></dd>
-		                <dd><a href="/OD/user/modifySGProperties/?juge=1" target="right">机关党群、行政正处</a></dd>
-		                <dd><a href="/OD/user/modifyDCProperties/?juge=1" target="right">机关党群、行政副处</a></dd>
-		                <dd><a href="/OD/user/modifyAGProperties/?juge=1" target="right">党务、行政正处</a></dd>
-		                <dd><a href="/OD/user/modifySBGProperties/?juge=1" target="right">党务、行政副处</a></dd>
+						<dd><a href="/user/modifyexcellent/?juge=1" target="right">修改优秀比例权重</a></dd>
+		                <dd><a href="/user/modifyProperties/?juge=1" target="right">校厅级权重</a></dd>
+		                <dd><a href="/user/modifySGProperties/?juge=1" target="right">机关党群、行政正处</a></dd>
+		                <dd><a href="/user/modifyDCProperties/?juge=1" target="right">机关党群、行政副处</a></dd>
+		                <dd><a href="/user/modifyAGProperties/?juge=1" target="right">党务、行政正处</a></dd>
+		                <dd><a href="/user/modifySBGProperties/?juge=1" target="right">党务、行政副处</a></dd>
 		                
                		</dl> -->
 						
@@ -131,7 +131,7 @@
 				<dl class="channel">
 
 					<a
-						href="/OD/evaluate/findByUserIdOrEvalByName/?id=${sessionScope.user.userId}"
+						href="/evaluate/findByUserIdOrEvalByName/?id=${sessionScope.user.userId}"
 						target="right"><dt>查看已评信息</dt></a>
 						<a target="right"
 					href="${pageContext.request.contextPath }/uploadReport.jsp"><dt>上传述职报告</dt></a>

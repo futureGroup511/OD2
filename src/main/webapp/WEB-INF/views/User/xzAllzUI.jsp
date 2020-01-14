@@ -35,7 +35,7 @@ function zancun(){
 	 } 
 	//alert(result);
 	$("#result").attr("value",result);
-	$('#form').attr("action", "/OD/role/zancun").submit();;	
+	$('#form').attr("action", "/role/zancun").submit();;
 	//$("#form").submit(); 
 	
 	
@@ -135,7 +135,7 @@ function jugeNull() {
 					result = 50;
 				}
 				if(result <= data){
-					/* var countResult = $("#result").val();
+					var countResult = $("#result").val();
 					var countUsre = "";
 					var els =document.getElementsByName("evalEvalby");
 					for (var i = 0, j = els.length; i < j; i++){
@@ -161,7 +161,7 @@ function jugeNull() {
 							}
 						}
 
-					});	 */
+					});
 					 
 				} else{
 					alert("本次评价的优秀人数超过50%，请重新评价！")

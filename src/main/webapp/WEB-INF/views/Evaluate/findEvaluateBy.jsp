@@ -80,7 +80,7 @@ $(document).ready(function () {
 		</div>
 	</div>
 	<div class="row form">
-		<form action="/OD/evaluate/findByUserIdOrEvalByName" method="post"
+		<form action="/evaluate/findByUserIdOrEvalByName" method="post"
 			id="form">
 			<input type="hidden" name="id" value="${sessionScope.user.userId}">
 			<input type="hidden" name="currentPage" value="${page.currentPage}"

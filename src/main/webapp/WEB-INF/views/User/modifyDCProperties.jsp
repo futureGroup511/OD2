@@ -27,7 +27,7 @@
 </head>
 <body>
 <div class="main">
-        <form action="/OD/user/modifyDCProperties" method="post" id="form">
+        <form action="/user/modifyDCProperties" method="post" id="form">
                 <input type="hidden" name="juge" value="2">
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-8 col-xs-offset-2">
