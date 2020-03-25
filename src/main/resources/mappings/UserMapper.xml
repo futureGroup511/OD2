@@ -202,6 +202,7 @@
 	<select id="getxzAllz" resultType="com.future.domain.User" resultMap="userAndRoleAndDeprtment">
 		<!-- select user.* from od_user user where user.user_np != 3 and user_desc != '1' -->
 		select user.*,department.dep_name from od_user user,od_department department where user.user_dep = department.dep_id and user.user_np != 3 and user_desc != '1'
+		order by user_dep,user_duty
 	</select>
 	
 	
@@ -241,11 +242,13 @@
 	<!-- 党群查询所有互评的 院系书记副书记 -->
 	<select id="dangquanAllHPUser" parameterType="java.lang.String" resultMap="userAndRoleAndDeprtment">
 		select user.*,department.dep_name from od_user user,od_department department where user.user_dep = department.dep_id and user.user_role = 4 
+		order by user_duty
 	</select>
 	
 	<!-- 党群查询所有下级 -->
 	<select id="dangquanAllDepDwon" parameterType="com.future.domain.User" resultMap="userAndRoleAndDeprtment">
 		select user.*,department.dep_name from od_user user,od_department department where user.user_dep = department.dep_id and user.user_dep = #{userDep} and user.user_np = 1
+		order by user_duty
 	</select>
 	
 	<!-- 教学书记  查询所有党群成员 -->
@@ -300,6 +303,7 @@
 		od_role role,
 		od_department dep
 		where user.user_role = role.role_id and user.user_dep = dep.dep_id and user.user_num != 'admin'
+		order by user_dep
 		limit #{0},#{1}
 	</select>
 	

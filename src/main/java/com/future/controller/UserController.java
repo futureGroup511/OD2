@@ -246,6 +246,7 @@ public class UserController extends BaseAction {
 		pageBean.setCurrentPage(currentPage);
 		pageBean = userService.pageBeanGetAllUser(pageBean);
 		pageBean.calbeginAndEnd();
+		System.out.println(pageBean);
 		modelAndView.addObject("pageBean",pageBean);
 		modelAndView.addObject("userDeleteMessage", message);
 		return modelAndView;
@@ -705,6 +706,28 @@ public class UserController extends BaseAction {
 			
 			//必须进行的操作，因为要拿到数量
 			List<User> user = userService.getxzAllz();
+
+			/*List<User> userList1 = new ArrayList<User>();
+			List<User> userList2 = new ArrayList<User>();
+			for (User value : user) {
+				if (value.getUserDuty().contains("副")) {
+					userList2.add(value);
+				} else {
+					userList1.add(value);
+				}
+			}
+			for (User value : userList2) {
+				int index = value.getUserDuty().indexOf("副");
+				for (int j = 0; j < userList1.size(); j++) {
+					if (userList1.get(j).getUserDuty().length() - 1 > index &&
+							userList1.get(j).getUserDuty().substring(0, index)
+									.equals(value.getUserDuty().substring(0, index))) {
+						userList1.add(j + 1, value);
+						break;
+					}
+				}
+			}*/
+
 			//先检查是否有暂存记录，然后在进行一下操作
 			List<TempEval> tempEvalList = userService.getByIdZanCunData(tempuser.getUserId(),3,"0");
 			//首先拿到本来要评价的任，（因为要拿到具体人数，所以必须放出来）

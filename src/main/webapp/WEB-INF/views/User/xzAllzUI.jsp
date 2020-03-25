@@ -75,6 +75,30 @@ function jugeNull() {
 	            //
 	        }
 	    });  */
+
+	   $('.inline1').on('click',function () {
+	   	f1();
+	   })
+		$('.inline2').on('click',function () {
+			f1();
+		})
+		$('.inline3').on('click',function () {
+			f1();
+		})
+		$('.inline4').on('click',function () {
+			f1();
+		})
+
+		function f1(){
+			var leng= $(".inline1").length;
+			var x = $(".inline1:not(:checked)").length;
+			$(".num").text(leng-x);
+			var i =  (leng-x)/leng *100 +"";
+			if(i.length >4){
+				i= i.substring(0,4)
+			}
+			$(".allnum").text( i + "%");
+		}
 	});
 
 	function checkout(){
@@ -182,7 +206,17 @@ a, a:visited{text-decoration:none;}
 .tong{ background:url(../images/images/sy-toubjing_03.gif) repeat-x 0px -11px; width:100%; height:40px;}
 .wrap{ width:auto; max-width:620px; margin:0 auto;}
 .center{ width:103%; margin:0 auto;}
-
+.col{
+	display: inline-block;
+	margin: 32px 100px 0px;
+}
+.col-class{
+	border-radius: 5px;
+	font-size: 18px;
+	margin-left: 3em;
+	color: #111;
+	display: inline-block;
+}
 
 </style>
 
@@ -192,7 +226,7 @@ a, a:visited{text-decoration:none;}
 <c:if test="${message == null }">
 <body background="images/dotted.png">
 <div class="dangqian">
- <div class="container"">
+ <div class="container">
   <div class="row" style="font-size:14px;">
         <div class="col-lg-3 col-lg-offset-7 col-md-4 col-md-offset-5 col-xs-3 col-xs-offset-7">
             <p>当前位置：评价>>${pingjiaMessage }</p>
@@ -214,6 +248,10 @@ a, a:visited{text-decoration:none;}
         <div class="col-lg-1 col-md-1 col-xs-1" >
         	<input type="button" class="btn btn-primary btn-md" style="border-radius:5px; font-size:18px; margin-left:3em;" onclick="zancun()" value="暂存评价结果"></input>
         </div>
+			<div class="col" >
+				<div class="col-class">当前选中优秀人数：<span class="num">0</span></div>
+				<div class="col-class">占总人数比例：<span class="allnum">0%</span></div>
+			</div>
         
        </div>
         <div class="row">
@@ -244,16 +282,16 @@ a, a:visited{text-decoration:none;}
 								<td class="biaodan">
 		                        	<label class="radio-inline">
 		                            	<%-- <input type="radio"   name="eval${user.userId }"  id="inlineRadio1" value="1"> 优秀 --%>
-		                            	<input type="radio"   name="eval${id.count }"  id="inlineRadio1" value="1"> 优秀
+		                            	<input type="radio"   name="eval${id.count }" class="inline1"  id="inlineRadio1" value="1"> 优秀
 		                            </label>
 		                            <label class="radio-inline">
-		                              <input type="radio"  class="chenzhi" name="eval${id.count }" id="inlineRadio2" value="2"> 称职
+		                              <input type="radio"  class="chenzhi inline2" name="eval${id.count }" id="inlineRadio2" value="2"> 称职
 		                            </label>
 		                            <label class="radio-inline">
-		                              <input type="radio" name="eval${id.count }" id="inlineRadio3" value="3">基本称职
+		                              <input type="radio" name="eval${id.count }" class="inline3" id="inlineRadio3" value="3">基本称职
 		                            </label>
 		                            <label class="radio-inline">
-		                              <input type="radio" name="eval${id.count }" id="inlineRadio3" value="4">不称职
+		                              <input type="radio" class="inline4" name="eval${id.count }" id="inlineRadio3" value="4">不称职
 		                            </label>
 		                        </td>
 								<td>
